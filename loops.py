@@ -18,5 +18,4 @@ if command == "q":
 while command == "e":
     task = input('Enter your tasks: ').split()
     print(task)
-
-
+    command = input('Enter "q" if you are done else "e" if you want to enter more')
