@@ -3,7 +3,8 @@ enter_task = ""
 view_task = ""
 task_complete = ""
 quit = ""
-task = [""]
+task = ""
+task_1 = []
 list = ["""
 Add task
 View task
@@ -13,10 +14,13 @@ print("What do you want to do? ")
 print(*list, sep=",")
 command = input("> ")
 command.upper()
-if command == "e":
-    task = input('Enter your task: ')
-    print(task)
-
+while command == "e":
+    if task == 'done':
+        print('These are all your tasks.')
+        break
+    else:
+        task_1 = [item for item in input("Enter your tasks: ").split()]
+        print(*task_1, sep="\n")
 
 
 
