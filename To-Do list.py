@@ -1,21 +1,28 @@
 print("To-Do List: ")
 enter_task = ""
 view_task = ""
-task_complete = ""
+task_1 = ""
 quit = ""
-task = [""]
+task = ""
 list = ["""
 Add task
 View task
-Mark completed
 Quit"""]
-print("What do you want to do? ")
+intro = print("What do you want to do? ")
 print(*list, sep=",")
 command = input("> ")
 command.upper()
-if command == "e":
-    task = input('Enter your task: ')
-    print(task)
+while command == "e":
+    if task != 'done':
+        task_1 = [item for item in input("Enter your tasks: ").split()]
+        print(*task_1, sep="\n")
+    break
+intro = print("What do you want to do? ")
+command = input("> ")
+if command == 'q':
+    print('Thank you for using our app! ')
+elif command == 'v':
+    print(*task_1, sep="\n")
 
 
 
